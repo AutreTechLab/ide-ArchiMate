@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>IDE for Educational Robotics</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>IDE for Educational Robotics</b>
+
+            <!-- If a View with Viewpoint -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+                       <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-purpose"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#query" aria-controls="query" role="tab" data-toggle="tab" class="i18n-query"></a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="query">
+						<br>
+						<style>
+						#myprompt {
+						    width: 80%;
+						    font-family: Consolas,Monaco, monospace;
+						}
+						</style>
+
+						<div id='myconsole'></div>
+
+						<p>
+							<tt><span id="useid">alasql</span> &gt;</tt> <input id='myprompt' autofocus/> 
+						</p>
+
+						<script src='../../lib/alasql/alasql.min.js'></script>
+
+						<script>
+							function decodeURL(s) {
+								return decodeURIComponent(s.replace(/\+/g, "%20"));
+							}
+
+							var first = decodeURI(location.search.substr(1));
+						 	alasql.options.logtarget = 'myconsole';
+							alasql.prompt('myprompt','useid');
+							alasql.prompt('myprompt','useid', first);
+
+							var dataElements = [ ];	  
+						  	var dataProperties = [ ];
+						 	var dataRelationships = [ ];
+						 	var dataViews = [ ];
+						 	var dataViewsContent = [ ];
+						 	var dataFolders = [ ];
+						 	var dataFoldersContent = [ ];
+
+							dataFolders.push({id:"id-87aaf79c0e1e4356a98c22c6e2c0dc34", type:"ArchimateModel", name:decodeURL("IDE+for+Educational+Robotics"), documentation:decodeURL("")});
+								dataFoldersContent.push({folderid:"id-87aaf79c0e1e4356a98c22c6e2c0dc34", contentid:"id-079c624d32b4475e9562a6b8d14f3fc4", contenttype:"Folder"});
+								dataFolders.push({id:"id-079c624d32b4475e9562a6b8d14f3fc4", type:"Folder", name:decodeURL("Strategy"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-87aaf79c0e1e4356a98c22c6e2c0dc34", contentid:"id-92c2b4ee78da4053a4ee53f9f8405b1f", contenttype:"Folder"});
+								dataFolders.push({id:"id-92c2b4ee78da4053a4ee53f9f8405b1f", type:"Folder", name:decodeURL("Business"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-87aaf79c0e1e4356a98c22c6e2c0dc34", contentid:"id-c7118287ea384f3ea073e7ffe4ca1db1", contenttype:"Folder"});
+								dataFolders.push({id:"id-c7118287ea384f3ea073e7ffe4ca1db1", type:"Folder", name:decodeURL("Application"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-87aaf79c0e1e4356a98c22c6e2c0dc34", contentid:"id-eba95871c6134d75b48c3f23d39eb9b8", contenttype:"Folder"});
+								dataFolders.push({id:"id-eba95871c6134d75b48c3f23d39eb9b8", type:"Folder", name:decodeURL("Technology+%26+Physical"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-87aaf79c0e1e4356a98c22c6e2c0dc34", contentid:"id-6bbdc281a83a48538280a469c26a3e8a", contenttype:"Folder"});
+								dataFolders.push({id:"id-6bbdc281a83a48538280a469c26a3e8a", type:"Folder", name:decodeURL("Motivation"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-6bbdc281a83a48538280a469c26a3e8a", contentid:"id-57102ca8841b426fbd7aabdad0fbb987", contenttype:"Driver"});
+										dataElements.push({id:"id-57102ca8841b426fbd7aabdad0fbb987", type:"Driver", specialization:decodeURL(""), name:decodeURL("Ignorare+iudicante+elegantis+disciplinae+oblivione+fruenda+cognitio+mi+debet+habent+irridente"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-6bbdc281a83a48538280a469c26a3e8a", contentid:"id-7d9ef841fb7a45a9b5b5525ec92c4988", contenttype:"Driver"});
+										dataElements.push({id:"id-7d9ef841fb7a45a9b5b5525ec92c4988", type:"Driver", specialization:decodeURL(""), name:decodeURL("Derepta+foris+constituant+moveat+possimus+praesidium+offendit+notissima+summam"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-6bbdc281a83a48538280a469c26a3e8a", contentid:"id-53e6044764f4437ea18cc9ae2e0369f5", contenttype:"Outcome"});
+										dataElements.push({id:"id-53e6044764f4437ea18cc9ae2e0369f5", type:"Outcome", specialization:decodeURL(""), name:decodeURL("Ornatus+democriti+illaberetur"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-87aaf79c0e1e4356a98c22c6e2c0dc34", contentid:"id-767665ec10654cb0a968e3a44e66425b", contenttype:"Folder"});
+								dataFolders.push({id:"id-767665ec10654cb0a968e3a44e66425b", type:"Folder", name:decodeURL("Implementation+%26+Migration"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-87aaf79c0e1e4356a98c22c6e2c0dc34", contentid:"id-d47efec850944b8f90ba6fde054c0468", contenttype:"Folder"});
+								dataFolders.push({id:"id-d47efec850944b8f90ba6fde054c0468", type:"Folder", name:decodeURL("Other"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-87aaf79c0e1e4356a98c22c6e2c0dc34", contentid:"id-fc6d436b412c4fb481454c2272016191", contenttype:"Folder"});
+								dataFolders.push({id:"id-fc6d436b412c4fb481454c2272016191", type:"Folder", name:decodeURL("Relations"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-87aaf79c0e1e4356a98c22c6e2c0dc34", contentid:"id-53aae3c4002240369321e88b52a07eeb", contenttype:"Folder"});
+								dataFolders.push({id:"id-53aae3c4002240369321e88b52a07eeb", type:"Folder", name:decodeURL("Views"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-53aae3c4002240369321e88b52a07eeb", contentid:"id-546326c8a0584b9e80e21f03eaf76298", contenttype:"Folder"});
+									dataFolders.push({id:"id-546326c8a0584b9e80e21f03eaf76298", type:"Folder", name:decodeURL("Robot+IDE"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-546326c8a0584b9e80e21f03eaf76298", contentid:"id-326e271c15a34f889664e4a8296e79f2", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-326e271c15a34f889664e4a8296e79f2", type:"ArchimateDiagramModel", name:decodeURL("Robotics+IDE+Overview"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-53aae3c4002240369321e88b52a07eeb", contentid:"id-868e3236fc424787b309de9b528eb719", contenttype:"Folder"});
+									dataFolders.push({id:"id-868e3236fc424787b309de9b528eb719", type:"Folder", name:decodeURL("Blockly+Mermaid+Editor"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-868e3236fc424787b309de9b528eb719", contentid:"id-e7f0d5133dbc4a9aa320d9583cdbcd75", contenttype:"SketchModel"});
+											dataViews.push({id:"id-e7f0d5133dbc4a9aa320d9583cdbcd75", type:"SketchModel", name:decodeURL("01+Interface"), documentation:decodeURL("")});
+													
+
+													
+
+										dataFoldersContent.push({folderid:"id-868e3236fc424787b309de9b528eb719", contentid:"id-ede243a29a354d6bb7f49095e9e8d9c5", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-ede243a29a354d6bb7f49095e9e8d9c5", type:"ArchimateDiagramModel", name:decodeURL("02+Motivation"), documentation:decodeURL("")});
+													dataViewsContent.push({viewid:"id-ede243a29a354d6bb7f49095e9e8d9c5", contentid:"id-57102ca8841b426fbd7aabdad0fbb987", contenttype:"Driver"});
+													dataViewsContent.push({viewid:"id-ede243a29a354d6bb7f49095e9e8d9c5", contentid:"id-7d9ef841fb7a45a9b5b5525ec92c4988", contenttype:"Driver"});
+															dataViewsContent.push({viewid:"id-ede243a29a354d6bb7f49095e9e8d9c5", contentid:"id-53e6044764f4437ea18cc9ae2e0369f5", contenttype:"Outcome"});
+													
+
+													
+
+										dataFoldersContent.push({folderid:"id-868e3236fc424787b309de9b528eb719", contentid:"id-9e0bcc876ee34e5a801ee7b76050c70d", contenttype:"SketchModel"});
+											dataViews.push({id:"id-9e0bcc876ee34e5a801ee7b76050c70d", type:"SketchModel", name:decodeURL("00+Notes+and+TODOs"), documentation:decodeURL("")});
+
+
+									dataFoldersContent.push({folderid:"id-53aae3c4002240369321e88b52a07eeb", contentid:"id-0f9fc21f375c4adf88f7569476cac651", contenttype:"ArchimateDiagramModel"});
+										dataViews.push({id:"id-0f9fc21f375c4adf88f7569476cac651", type:"ArchimateDiagramModel", name:decodeURL("Architecture+Overview+-+Websockets"), documentation:decodeURL("")});
+
+
+
+
+						    alasql('CREATE TABLE Elements');
+						    alasql('CREATE TABLE Properties');
+						    alasql('CREATE TABLE Relationships');
+						    alasql('CREATE TABLE Views');
+						    alasql('CREATE TABLE ViewsContent');
+						    alasql('CREATE TABLE Folders');
+						    alasql('CREATE TABLE FoldersContent');
+
+						    alasql.tables.Elements.data = dataElements;
+						    alasql.tables.Properties.data = dataProperties;
+						    alasql.tables.Relationships.data = dataRelationships;
+						    alasql.tables.Views.data = dataViews;
+						    alasql.tables.ViewsContent.data = dataViewsContent;
+						    alasql.tables.Folders.data = dataFolders;
+						    alasql.tables.FoldersContent.data = dataFoldersContent;
+						</script> 
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
