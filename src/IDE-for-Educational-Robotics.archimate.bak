@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="Autre Techlab" id="id-87aaf79c0e1e4356a98c22c6e2c0dc34" version="4.9.0">
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="IDE for Educational Robotics" id="id-87aaf79c0e1e4356a98c22c6e2c0dc34" version="4.9.0">
   <folder name="Strategy" id="id-079c624d32b4475e9562a6b8d14f3fc4" type="strategy"/>
   <folder name="Business" id="id-92c2b4ee78da4053a4ee53f9f8405b1f" type="business">
     <element xsi:type="archimate:BusinessActor" name="Amplificarique quanta" id="id-23cfcc4aefa145e8bd8926559c6821d4"/>
